@@ -168,17 +168,40 @@ def set_committer_date_and_create_new_commit(date):
     os.environ["GIT_COMMITTER_DATE"] = date
     os.environ["GIT_AUTHOR_DATE"] = date
 
-    commit_message = input("Enter the commit message for the new commit: ").strip()
-    if not commit_message:
-        print("Error: Commit message cannot be empty.")
-        exit(1)
+    while True:
+        commit_message = input("Enter the commit message for the new commit (or press 'b' or 'esc' to go back): ").strip()
+        if commit_message.lower() in ['b', 'esc']:
+            print("Returning to the previous menu.")
+            return
+        if not commit_message:
+            print("Error: Commit message cannot be empty.")
+        else:
+            break
 
     try:
         subprocess.run(["git", "commit", "--allow-empty", "--date", date, "-m", commit_message], check=True)
         print("New commit created successfully.")
     except subprocess.CalledProcessError:
         print("Error: Unable to create a new commit.")
-        exit(1)
+        return
+
+    while True:
+        push_choice = input("Do you want to push the changes now? (y/n or 'b' to go back): ").strip().lower()
+        if push_choice in ['b', 'esc']:
+            print("Returning to the previous menu.")
+            return
+        elif push_choice in ['y', 'yes']:
+            try:
+                subprocess.run(["git", "push"], check=True)
+                print("Changes pushed successfully.")
+            except subprocess.CalledProcessError:
+                print("Error: Unable to push the changes.")
+            return
+        elif push_choice in ['n', 'no']:
+            print("Changes were not pushed.")
+            return
+        else:
+            print("Invalid input. Please enter 'y', 'n', or 'b'.")
 
 def view_previous_commits():
     """Display a list of previous commits with numbers."""
