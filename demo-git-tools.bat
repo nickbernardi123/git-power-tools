@@ -43,13 +43,37 @@ echo Git Helper provides interactive menus for advanced git operations:
 echo.
 echo 1. Branch management (create, delete, switch)
 echo 2. Commit operations (amend commits, dates, messages)
-echo 3. Team workflow tools (pull requests, stash, cherry-pick)
+echo.
+echo The enhanced Git Helper provides smart features:
+echo - Auto-pulls when switching branches
+echo - Ensures correct upstream tracking for pushes
+echo - Interactive staging and committing
 echo.
 echo To try these tools:
 echo - Run sgit or s-status for Super Git (s-status is shortest)
-echo - Run python git-helper-tools/git_helpers.py for Git Helper
+echo - Run git-helper to launch the Git Helper Tool
 echo.
-echo For installation instructions and documentation, see:
+echo Press any key to see installation information...
+pause > nul
+
+cls
+echo =========================================
+echo Git Power Tools Installation
+echo =========================================
+echo.
+echo Easy installation for you and your friends!
+echo.
+echo 1. For interactive installation with selections:
+echo    - Run install.sh (Linux/macOS/Git Bash)
+echo    - Run install.bat (Windows)
+echo.
+echo 2. The installer will:
+echo    - Let you choose which tools to install
+echo    - Add them to your PATH
+echo    - Install required dependencies
+echo    - Make tools available system-wide
+echo.
+echo For detailed documentation, see:
 echo README.md in the project directory
 echo.
 echo Press any key to exit...

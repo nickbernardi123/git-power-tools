@@ -39,9 +39,32 @@ Interactive CLI tool for advanced Git operations, available in two versions:
 
 ## Installation
 
-You can install either tool independently or both together:
+You can use our interactive installer or install tools individually:
 
-### Installing Super Git (sgit)
+### Interactive Installation (Recommended)
+
+Install all tools with our interactive installer that lets you select which tools you want:
+
+```bash
+# Clone the repository
+git clone https://github.com/nickbernardi123/git-power-tools
+cd git-power-tools
+
+# Run the interactive installer
+./install.sh      # On Linux/macOS/Git Bash
+# or
+install.bat       # On Windows
+```
+
+The interactive installer:
+- Lets you select which tools to install
+- Automatically adds tools to your PATH
+- Installs required dependencies
+- Creates global shortcut commands
+
+### Manual Installation
+
+#### Installing Super Git (sgit)
 
 ```bash
 # Clone just the sgit-tools folder
@@ -54,7 +77,7 @@ cd sgit-tools
 chmod +x ./setup.sh && ./setup.sh  # On Linux/macOS
 ```
 
-### Installing Git Helper
+#### Installing Git Helper
 
 ```bash
 # Clone just the git-helper-tools folder
@@ -63,25 +86,11 @@ cd git-power-tools
 git sparse-checkout set git-helper-tools
 cd git-helper-tools
 pip install -r requirements.txt
-```
 
-### Installing Both Tools
-
-```bash
-# Clone the entire repository
-git clone https://github.com/nickbernardi123/git-power-tools
-cd git-power-tools
-
-# Set up sgit
-cd sgit-tools
-./setup-sgit-windows.bat  # On Windows
-# or 
+# Run setup script
+./setup-git-helper-windows.bat  # On Windows
+# or
 chmod +x ./setup.sh && ./setup.sh  # On Linux/macOS
-cd ..
-
-# Set up Git Helper
-cd git-helper-tools
-pip install -r requirements.txt
 ```
 
 ## Usage
