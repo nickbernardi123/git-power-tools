@@ -37,7 +37,7 @@ You can install either tool independently or both together:
 
 ```bash
 # Clone just the sgit-tools folder
-git clone --sparse https://github.com/your-username/git-power-tools
+git clone --sparse https://github.com/nickbernardi123/git-power-tools
 cd git-power-tools
 git sparse-checkout set sgit-tools
 cd sgit-tools
@@ -50,7 +50,7 @@ chmod +x ./setup.sh && ./setup.sh  # On Linux/macOS
 
 ```bash
 # Clone just the git-helper-tools folder
-git clone --sparse https://github.com/your-username/git-power-tools
+git clone --sparse https://github.com/nickbernardi123/git-power-tools
 cd git-power-tools
 git sparse-checkout set git-helper-tools
 cd git-helper-tools
@@ -61,7 +61,7 @@ pip install -r requirements.txt
 
 ```bash
 # Clone the entire repository
-git clone https://github.com/your-username/git-power-tools
+git clone https://github.com/nickbernardi123/git-power-tools
 cd git-power-tools
 
 # Set up sgit
