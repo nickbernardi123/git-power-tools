@@ -1,32 +1,34 @@
-# Git Helper Tool
+# Custom Scripts Collection
 
-This tool helps you manage git commits, branches, and team workflows from the command line with an interactive menu.
+This directory contains a collection of custom scripts and tools to improve development workflow.
 
-## Features
+## Available Tools
+
+### [Git Helper Tools](./git-helper-tools)
+
+A set of Python scripts that help you manage git commits, branches, and team workflows from the command line with an interactive menu.
+
+**Key Features:**
 - Amend commit dates and messages
-- Create commits with custom dates
-- Branch management (switch, create, delete, info, fix tracking)
-- Team tools (view remote branches, pull requests, quick push/pull, stash, merges, unpushed commits)
-- Automated backup before destructive actions
-- Extra tools: rebase UI, commit templates, cherry-pick, etc.
+- Branch management (create, switch, delete)
+- Team workflow tools
 
-## Requirements
-- Python 3.7+
-- See requirements.txt for dependencies
+### [Super Git (sgit)](./sgit-tools)
+
+A bash utility that allows you to run git commands on all repositories in a parent folder simultaneously.
+
+**Key Features:**
+- Execute git commands across multiple repositories
+- Visual status of each repository
+- Skip non-git directories automatically
+
+## Installation
+
+Each tool has its own installation instructions in its respective directory.
+
+- For Git Helper Tools, see [git-helper-tools/README-git-helper.md](./git-helper-tools/README-git-helper.md)
+- For Super Git (sgit), see [sgit-tools/README-sgit.md](./sgit-tools/README-sgit.md)
 
 ## Usage
-1. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
-2. Run the tool:
-   ```
-   python backdate-commits.py
-   ```
 
-## Customization
-- You can add or remove features by editing the script or moving helpers to separate modules.
-
----
-
-For advanced enhancements, see enhancement_ideas.py.
+Navigate to the specific tool's directory for detailed usage instructions.

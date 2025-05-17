@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# s - Super shortcut command to run sgit
+# This script simply passes all arguments to sgit
+
+# Find the sgit command
+if command -v sgit &> /dev/null; then
+    sgit "$@"
+else
+    # If sgit is not in path, try to find it in customScripts
+    if [ -f "/c/customScripts/sgit-tools/sgit" ]; then
+        /c/customScripts/sgit-tools/sgit "$@"
+    else
+        echo "Error: sgit command not found"
+        exit 1
+    fi
+fi

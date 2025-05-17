@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# sgit-pull - Pull all git repositories in the current directory
+# This is a shortcut for 'sgit pull'
+
+# Get the script directory
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+# Call the main sgit script with 'pull'
+"$script_dir/sgit" pull "$@"

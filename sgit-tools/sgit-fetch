@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# sgit-fetch - Fetch updates from all repositories
+# This is a shortcut for 'sgit fetch'
+
+# Get the script directory
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+# Call the main sgit script with 'fetch'
+"$script_dir/sgit" fetch "$@"
