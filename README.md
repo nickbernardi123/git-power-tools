@@ -19,13 +19,21 @@ Run git commands on multiple repositories simultaneously.
 
 ### 2. Git Helper
 
-Interactive CLI tool for advanced Git operations.
+Interactive CLI tool for advanced Git operations, available in two versions:
 
+#### Enhanced Version (Recommended)
 **Key Features:**
-- Manage git commits, branches, and team workflows
-- Amend commit dates and messages
-- Branch management (create, switch, delete)
-- Team workflow tools
+- Smart branch management with automatic pulling
+- Safe commit and push operations with upstream tracking
+- Interactive staging and committing workflow
+- Simple and focused interface
+
+#### Original Full-Featured Version
+**Key Features:**
+- Complete team workflow tools
+- Extended branch management options
+- Advanced commit operations
+- Additional utilities
 
 [➡️ Learn more about Git Helper](./git-helper-tools/README-git-helper.md)
 
