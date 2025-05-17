@@ -13,10 +13,16 @@ Super Git (sgit) is a powerful command-line utility that allows you to run git c
 - **Summary statistics** after command execution
 - **Supports all git commands and parameters**
 - **Convenient shortcut commands** for common operations:
-  - `sgit-status` - Check the status of all repositories
-  - `sgit-pull` - Pull updates for all repositories
-  - `sgit-fetch` - Fetch updates without merging
-  - `sgit-unpushed` - Check for unpushed changes in all repositories
+  - **Super Short Commands**:
+    - `s-status` - Check the status of all repositories (shortest)
+    - `s-pull` - Pull updates for all repositories (shortest)
+    - `s-fetch` - Fetch updates without merging (shortest)
+    - `s-unpushed` - Check for unpushed changes (shortest)
+  - **Original Shortcuts** (maintained for compatibility):
+    - `sgit-status` - Check the status of all repositories
+    - `sgit-pull` - Pull updates for all repositories
+    - `sgit-fetch` - Fetch updates without merging
+    - `sgit-unpushed` - Check for unpushed changes in all repositories
 
 ## Installation
 

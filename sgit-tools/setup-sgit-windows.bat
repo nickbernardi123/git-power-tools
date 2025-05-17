@@ -34,7 +34,7 @@ if exist "%install_dir%\sgit-enhanced" (
 )
 
 REM Use PowerShell to add the directory to PATH permanently
-powershell -Command "[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH', 'User') + ';%install_dir%', 'User')"
+powershell -Command "[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH', 'User') + ';%install_dir%;%install_dir%\shorter-aliases', 'User')"
 
 if %errorlevel% equ 0 (
     echo.
@@ -50,7 +50,13 @@ if %errorlevel% equ 0 (
     echo   sgit -p pull               - Pull all repositories in parallel
     echo   sgit --help                - Show all available options
     echo.
-    echo Shortcut commands:
+    echo Super Short Commands:
+    echo   s-status                   - Check status of all repositories (shortest)
+    echo   s-pull                     - Pull all repositories (shortest) 
+    echo   s-fetch                    - Fetch updates for all repositories (shortest)
+    echo   s-unpushed                 - Check for unpushed changes (shortest)
+    echo.
+    echo Original Shortcut Commands (maintained for compatibility):
     echo   sgit-status                - Check status of all repositories
     echo   sgit-pull                  - Pull all repositories
     echo   sgit-fetch                 - Fetch updates for all repositories
@@ -69,7 +75,7 @@ if %errorlevel% equ 0 (
 REM Make scripts executable using Git Bash or WSL if available
 echo.
 echo Setting executable permissions on sgit scripts...
-bash -c "chmod +x \"%install_dir%/sgit\" \"%install_dir%/sgit-status\" \"%install_dir%/sgit-pull\" \"%install_dir%/sgit-fetch\" \"%install_dir%/sgit-unpushed\"" 2>nul
+bash -c "chmod +x \"%install_dir%/sgit\" \"%install_dir%/sgit-status\" \"%install_dir%/sgit-pull\" \"%install_dir%/sgit-fetch\" \"%install_dir%/sgit-unpushed\" \"%install_dir%/shorter-aliases/s-status\" \"%install_dir%/shorter-aliases/s-pull\" \"%install_dir%/shorter-aliases/s-fetch\" \"%install_dir%/shorter-aliases/s-unpushed\"" 2>nul
 
 echo.
 echo Setup process complete!

@@ -95,6 +95,14 @@ install_file() {
 install_file "$SGIT_SOURCE" "$INSTALL_DIR/sgit"
 install_file "$SCRIPT_DIR/sgit-status" "$INSTALL_DIR/sgit-status"
 install_file "$SCRIPT_DIR/sgit-pull" "$INSTALL_DIR/sgit-pull"
+install_file "$SCRIPT_DIR/sgit-fetch" "$INSTALL_DIR/sgit-fetch"
+install_file "$SCRIPT_DIR/sgit-unpushed" "$INSTALL_DIR/sgit-unpushed"
+
+# Install shorter aliases
+install_file "$SCRIPT_DIR/shorter-aliases/s-status" "$INSTALL_DIR/s-status"
+install_file "$SCRIPT_DIR/shorter-aliases/s-pull" "$INSTALL_DIR/s-pull"
+install_file "$SCRIPT_DIR/shorter-aliases/s-fetch" "$INSTALL_DIR/s-fetch"
+install_file "$SCRIPT_DIR/shorter-aliases/s-unpushed" "$INSTALL_DIR/s-unpushed"
 
 # Check if installation was successful
 if command -v sgit &>/dev/null; then
@@ -102,9 +110,23 @@ if command -v sgit &>/dev/null; then
   echo -e "${GREEN}Super Git (sgit) has been successfully installed!${NC}"
   echo
   echo -e "${YELLOW}You can now use sgit from any directory:${NC}"
-  echo -e "  ${BLUE}sgit status${NC} - Check status of all repositories"
-  echo -e "  ${BLUE}sgit pull${NC}   - Pull all repositories"
-  echo -e "  ${BLUE}sgit --help${NC} - Show help with all options"
+  echo -e "  ${BLUE}sgit status${NC}              - Check status of all repositories"
+  echo -e "  ${BLUE}sgit pull${NC}                - Pull all repositories"
+  echo -e "  ${BLUE}sgit -r status${NC}           - Check status recursively"
+  echo -e "  ${BLUE}sgit -p pull${NC}             - Pull all repositories in parallel"
+  echo -e "  ${BLUE}sgit --help${NC}              - Show help with all options"
+  echo
+  echo -e "${YELLOW}Super Short Commands:${NC}"
+  echo -e "  ${BLUE}s-status${NC}                 - Check status (shortest version)"
+  echo -e "  ${BLUE}s-pull${NC}                   - Pull updates (shortest version)"
+  echo -e "  ${BLUE}s-fetch${NC}                  - Fetch updates (shortest version)"
+  echo -e "  ${BLUE}s-unpushed${NC}               - Check unpushed changes (shortest version)"
+  echo
+  echo -e "${YELLOW}Original Shortcut Commands (maintained for compatibility):${NC}"
+  echo -e "  ${BLUE}sgit-status${NC}              - Check status of all repositories"
+  echo -e "  ${BLUE}sgit-pull${NC}                - Pull all repositories"
+  echo -e "  ${BLUE}sgit-fetch${NC}               - Fetch updates for all repositories"
+  echo -e "  ${BLUE}sgit-unpushed${NC}            - Check for unpushed changes"
   echo
 else
   echo

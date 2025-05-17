@@ -1,0 +1,6 @@
+#!/bin/bash
+# s-status - Super short alias for sgit status
+# Simply redirects to sgit status with all arguments
+
+script_dir="$(dirname "$(readlink -f "$0")")"
+"$script_dir/../sgit" status "$@"
