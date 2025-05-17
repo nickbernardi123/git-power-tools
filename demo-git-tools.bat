@@ -25,6 +25,12 @@ echo 3. sgit -r status - Show status recursively in subdirectories
 echo 4. sgit -p fetch - Fetch in parallel for faster operation
 echo 5. sgit -s pull - Select which repositories to pull using interactive mode
 echo.
+echo Super short commands (faster typing):
+echo 1. s-status - Ultra short version of sgit status
+echo 2. s-pull - Ultra short version of sgit pull
+echo 3. s-fetch - Ultra short version of sgit fetch
+echo 4. s-unpushed - Ultra short version of sgit unpushed
+echo.
 echo Press any key to see Git Helper tools...
 pause > nul
 
@@ -40,7 +46,7 @@ echo 2. Commit operations (amend commits, dates, messages)
 echo 3. Team workflow tools (pull requests, stash, cherry-pick)
 echo.
 echo To try these tools:
-echo - Run sgit or sgit-status for Super Git
+echo - Run sgit or s-status for Super Git (s-status is shortest)
 echo - Run python git-helper-tools/git_helpers.py for Git Helper
 echo.
 echo For installation instructions and documentation, see:
