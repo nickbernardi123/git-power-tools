@@ -1,34 +1,87 @@
-# Custom Scripts Collection
+# Git Power Tools
 
-This directory contains a collection of custom scripts and tools to improve development workflow.
+This repository contains a collection of powerful Git utilities to enhance your workflow when working with Git repositories.
 
 ## Available Tools
 
-### [Git Helper Tools](./git-helper-tools)
+### 1. Super Git (sgit)
 
-A set of Python scripts that help you manage git commits, branches, and team workflows from the command line with an interactive menu.
+Run git commands on multiple repositories simultaneously.
 
 **Key Features:**
+- Execute any git command across all repositories in a directory
+- Colorful status output for each repository
+- Skip non-git directories automatically
+- Summary statistics of operations
+- Shortcut commands for common operations
+
+[➡️ Learn more about Super Git](./sgit-tools/README-sgit.md)
+
+### 2. Git Helper
+
+Interactive CLI tool for advanced Git operations.
+
+**Key Features:**
+- Manage git commits, branches, and team workflows
 - Amend commit dates and messages
 - Branch management (create, switch, delete)
 - Team workflow tools
 
-### [Super Git (sgit)](./sgit-tools)
-
-A bash utility that allows you to run git commands on all repositories in a parent folder simultaneously.
-
-**Key Features:**
-- Execute git commands across multiple repositories
-- Visual status of each repository
-- Skip non-git directories automatically
+[➡️ Learn more about Git Helper](./git-helper-tools/README-git-helper.md)
 
 ## Installation
 
-Each tool has its own installation instructions in its respective directory.
+You can install either tool independently or both together:
 
-- For Git Helper Tools, see [git-helper-tools/README-git-helper.md](./git-helper-tools/README-git-helper.md)
-- For Super Git (sgit), see [sgit-tools/README-sgit.md](./sgit-tools/README-sgit.md)
+### Installing Super Git (sgit)
+
+```bash
+# Clone just the sgit-tools folder
+git clone --sparse https://github.com/your-username/git-power-tools
+cd git-power-tools
+git sparse-checkout set sgit-tools
+cd sgit-tools
+./setup-sgit-windows.bat  # On Windows
+# or
+chmod +x ./setup.sh && ./setup.sh  # On Linux/macOS
+```
+
+### Installing Git Helper
+
+```bash
+# Clone just the git-helper-tools folder
+git clone --sparse https://github.com/your-username/git-power-tools
+cd git-power-tools
+git sparse-checkout set git-helper-tools
+cd git-helper-tools
+pip install -r requirements.txt
+```
+
+### Installing Both Tools
+
+```bash
+# Clone the entire repository
+git clone https://github.com/your-username/git-power-tools
+cd git-power-tools
+
+# Set up sgit
+cd sgit-tools
+./setup-sgit-windows.bat  # On Windows
+# or 
+chmod +x ./setup.sh && ./setup.sh  # On Linux/macOS
+cd ..
+
+# Set up Git Helper
+cd git-helper-tools
+pip install -r requirements.txt
+```
 
 ## Usage
 
-Navigate to the specific tool's directory for detailed usage instructions.
+See the README files in each tool's directory for detailed usage instructions:
+- [Super Git Usage](./sgit-tools/README-sgit.md#usage)
+- [Git Helper Usage](./git-helper-tools/README-git-helper.md#usage)
+
+## License
+
+MIT License
