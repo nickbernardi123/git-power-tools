@@ -1,7 +1,6 @@
 #!/bin/bash
 # Global launcher for Git Helper Tool
-# Simply redirects to the enhanced version of the tool
+# Directly references the consolidated version of the tool
 
-script_dir="$(dirname "$(readlink -f "$0")")"
-python "$script_dir/git_helpers_enhanced.py" "$@"
+python "c:/customScripts/git-helper-tools/git_helper_consolidated.py" "$@"
 
