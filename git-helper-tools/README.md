@@ -40,6 +40,35 @@ An enhanced command-line interface for Git operations, focusing on branch manage
 3. Ensure the `git-helper` script is executable (`chmod +x git-helper`)
 4. Run `git-helper` from any Git repository
 
+## 🚀 Quick Start
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/nickbernardi123/git-power-tools.git
+   cd git-power-tools/git-helper-tools
+   ```
+
+2. **Run the installer (works for Windows, Mac, Linux, Git Bash):**
+   ```bash
+   bash install.sh
+   ```
+
+3. **Follow the prompts:**
+   - Choose which tools to install (Git Helper Tool, sgit-tools, or both)
+   - Choose your environment (Bash or Windows CMD)
+   - Optionally add the tool directory to your PATH
+
+4. **Usage:**
+   ```bash
+   git helper
+   git gh
+   sgit
+   ```
+
+---
+- The installer will set up all dependencies and add convenient git aliases.
+- If you want to uninstall, remove the aliases from your global git config and (optionally) remove the tool directory from your PATH.
+
 ## Requirements
 - Python 3.6+
 - Git
